@@ -12,10 +12,11 @@ void Alphabet::SetCoord(const double coord_[3]) {
 	Motion::PosCommand p[3];
 	for (int i = 0; i < 3; i++) {
 		p[i].axis = gAxis[i];
-		p[i].profile.velocity = VELOCITY;
+		if (i == 1) p[i].profile.velocity = VELOCITY * 2.5;	// Y축 속도 2.5배
+		else p[i].profile.velocity = VELOCITY;
 		p[i].profile.acc = ACC;
 		p[i].profile.dec = DEC;
-		p[i].target = coord_[i];
+		p[i].target = coord_[i] * ENC;
 	}
 
 	coord.push_back({ p[0], p[1], p[2] });
@@ -71,8 +72,8 @@ bool Alphabet::FileOpen(std::vector<std::vector<double>>& data, const std::strin
 	return true;
 }
 void Alphabet::SetTargetPos(const int idx, const int rowOf, const int colOf) {
-	coord[idx][0].target += colOf;
-	coord[idx][1].target += rowOf;
+	coord[idx][0].target += (colOf * ENC);
+	coord[idx][1].target -= (rowOf * ENC);
 
 }
 std::array<Motion::PosCommand, 3>& Alphabet::GetPosCommand(int i)

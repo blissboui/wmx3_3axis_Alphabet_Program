@@ -22,7 +22,7 @@ int main() {
 	// 서보 on
 	motionCtrl.ServoOn();
 	// 엑셀 csv 파일로부터 A~Z 알파벳 좌표 데이터 읽은 후 전달한 변수에 저장
-	Alphabet::SetAlphabetData(alphabet_AZ, (std::string)"C:\\Users\\boboy\\source\\repos\\Data\\AlphabetData.csv");
+	Alphabet::SetAlphabetData(alphabet_AZ, (std::string)"C:\\Users\\abc\\source\\repos\\wmx3_3axis_Alphabet_Program\\AlphabetData.csv");
 	
 	while (1)
 	{

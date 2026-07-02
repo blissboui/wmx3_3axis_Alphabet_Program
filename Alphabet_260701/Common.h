@@ -18,15 +18,16 @@
 #define COL_OFFSET_LEN 50
 enum AXIS
 {
-	X_AXIS = 0,
-	Y_AXIS = 1,
+	X_AXIS = 1,
+	Y_AXIS = 0,
 	Z_AXIS = 2,
 };
 enum PROFILE
 {
-	VELOCITY = 50,
-	ACC = 50,
-	DEC = 50
+	VELOCITY = 10000,
+	ACC = 100000,
+	DEC = 100000,
+	ENC = 1000
 };
 
 using namespace wmx3Api;
