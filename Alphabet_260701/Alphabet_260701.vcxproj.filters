@@ -27,6 +27,12 @@
     <ClCompile Include="IO.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Motion.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InputString.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common.h">
@@ -38,7 +44,7 @@
     <ClInclude Include="InputString.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Motion.h">
+    <ClInclude Include="AlphabetMotion.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">

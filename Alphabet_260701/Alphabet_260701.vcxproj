@@ -131,8 +131,10 @@
   <ItemGroup>
     <ClCompile Include="Alphabet.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="InputString.cpp" />
     <ClCompile Include="IO.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Motion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alphabet.h" />
@@ -140,7 +142,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="InputString.h" />
     <ClInclude Include="IO.h" />
-    <ClInclude Include="Motion.h" />
+    <ClInclude Include="AlphabetMotion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

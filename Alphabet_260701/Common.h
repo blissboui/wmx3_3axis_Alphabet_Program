@@ -11,8 +11,9 @@
 #include "WMX3Api.h"
 #include <iostream>
 #include <vector>
+#include <string>
 
-#define MAX_COL 4
+#define MAX_COL 5
 #define MAX_ROW 5
 #define ROW_OFFSET_LEN 50
 #define COL_OFFSET_LEN 50
@@ -24,7 +25,7 @@ enum AXIS
 };
 enum PROFILE
 {
-	VELOCITY = 10000,
+	VELOCITY = 70000,
 	ACC = 100000,
 	DEC = 100000,
 	ENC = 1000

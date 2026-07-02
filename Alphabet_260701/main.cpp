@@ -1,14 +1,14 @@
 #include "Alphabet.h"
 #include "InputString.h"
 #include "Engine.h"
-#include "Motion.h"
+#include "AlphabetMotion.h"
 #include "IO.h"
 
 void SetOffset(vector<Alphabet>& alphAZ, vector<Alphabet>& strAlph, const InputString& str_);
 void StartMotion(vector<Alphabet>& strAlph, AlphabetMotion& motion_, int strLen);
 
 int main() {
-	vector<Alphabet> alphabet_AZ(26);
+	vector<Alphabet> alphabet_AZ(27);
 	InputString str;
 	WMX3Api wmx;
 	Engine engineCtrl(&wmx);
@@ -32,6 +32,7 @@ int main() {
 
 		str.PrintString();
 		if (1) {
+			Sleep(5000);
 			StartMotion(strAlphabet, motionCtrl, str.GetStrLen());	// 모션 시작
 		}
 
@@ -47,7 +48,7 @@ void StartMotion(vector<Alphabet>& strAlph, AlphabetMotion& motion_, int strLen)
 	{
 		for (int i = 0; i < strAlph[idx].GetCoordNum(); i++)
 		{
-			motion_.MovePos(strAlph[idx].GetPosCommand(i).data());
+			motion_.MovePos(strAlph[idx].GetLinearIntplCommand(i));
 		}
 	}
 }
